@@ -23,3 +23,7 @@ app:
   SimilarProducts:
     cors-origins:
       - http://localhost:3001
+  microservices:
+    mcaMicroservice: http://localhost:3001
+
+
