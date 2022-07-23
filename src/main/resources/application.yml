@@ -1,0 +1,25 @@
+info:
+  app:
+    name: "@project.artifactId@"
+    description: "@project.description@"
+    version: "@project.version@"
+    encoding: "@project.build.sourceEncoding@"
+    java:
+      source: "@maven.compiler.source@"
+      target: "@maven.compiler.target@"
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+server:
+  port: 5000
+
+app:
+  api:
+    swagger:
+      enable:true
+  SimilarProducts:
+    cors-origins:
+      - http://localhost:3001
