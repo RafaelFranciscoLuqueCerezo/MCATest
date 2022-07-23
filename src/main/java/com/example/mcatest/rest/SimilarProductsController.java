@@ -1,6 +1,7 @@
 package com.example.mcatest.rest;
 
 import com.example.mcatest.application.similarProducts.find.SimilarProductsFinder;
+import com.example.mcatest.application.similarProducts.find.dto.SimilarProducts;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -19,9 +20,8 @@ public class SimilarProductsController {
     private final SimilarProductsFinder finder;
 
     @GetMapping(value = "/{productId}/similar",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Void> getSimilarProduct(@PathVariable String productId){
-        finder.getSimilarProducts(productId);
-        return null;
+    public ResponseEntity<SimilarProducts> getSimilarProduct(@PathVariable String productId){
+        return ResponseEntity.ok(finder.getSimilarProducts(productId));
     }
 
 }
