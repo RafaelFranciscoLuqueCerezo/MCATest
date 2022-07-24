@@ -1,6 +1,7 @@
 package com.example.mcatest.application.similarProducts.find.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModel;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +14,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(description = "Product detail", type = "Object")
+@ApiModel(description = "Product detail")
 public class ProductDetail implements Serializable {
 
     @Schema(description = "Product id", required = true, minLength = 1)
