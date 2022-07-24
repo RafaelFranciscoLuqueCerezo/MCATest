@@ -20,10 +20,10 @@ app:
   api:
     swagger:
       enable:true
-  SimilarProducts:
-    cors-origins:
+  corsOrigins:
       - http://localhost:3001
-  microservices:
-    mcaMicroservice: http://localhost:3001
+      - https://fiddle.jshell.net
+      - https://cdpn.io
+  mcaMicroservice: http://localhost:3001
 
 
