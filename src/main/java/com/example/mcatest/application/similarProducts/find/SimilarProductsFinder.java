@@ -2,7 +2,6 @@ package com.example.mcatest.application.similarProducts.find;
 
 import com.example.mcatest.application.similarProducts.find.dto.ProductDetail;
 import com.example.mcatest.application.similarProducts.find.dto.SimilarProducts;
-import com.example.mcatest.domain.exception.NotFoundRestTemplateErrorException;
 import com.example.mcatest.microservices.McaMicroservice.McaMicroservice;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +20,7 @@ import java.util.stream.Collectors;
 public class SimilarProductsFinder {
     private final McaMicroservice mcaMicroservice;
 
-    public SimilarProducts getSimilarProducts(String productId) {
+    public SimilarProducts getSimilarProducts(String productId){
         log.info("getting similar products for id {}", productId);
         List<Integer> similarProductIds = mcaMicroservice.getMcaSimilarProducts(productId);
         List<CompletableFuture<ProductDetail>> completableFutureList = new ArrayList<>();

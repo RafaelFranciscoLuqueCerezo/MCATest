@@ -1,6 +1,6 @@
 package com.example.mcatest.application.common;
 
-import com.example.mcatest.domain.exception.NotFoundRestTemplateErrorException;
+import com.example.mcatest.domain.exception.NotFoundErrorException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
@@ -18,7 +18,7 @@ public class RestTemplateErrorHandler implements ResponseErrorHandler {
     @Override
     public void handleError(ClientHttpResponse response) throws IOException {
         if(response.getStatusCode()== HttpStatus.NOT_FOUND){
-           throw new NotFoundRestTemplateErrorException("not found");
+           throw new NotFoundErrorException("Not found");
         }
     }
 }
