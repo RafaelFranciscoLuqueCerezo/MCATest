@@ -13,11 +13,11 @@ public class SimilarProductsAsyncConfig {
     @Bean(name = "asyncExecutor")
     public Executor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        //CPU logic threads min that are going to be used
-        executor.setCorePoolSize(3);
+        //CPU logic min threads that are going to be used
+        executor.setCorePoolSize(2);
         //Additional threads to create when al core threads are busy
-        executor.setMaxPoolSize(3);
-        executor.setQueueCapacity(500);
+        executor.setMaxPoolSize(2147483647);
+        executor.setQueueCapacity(2147483647);
         executor.setThreadNamePrefix("AsyncThreadSimilarProduct-");
         executor.initialize();
         return executor;
