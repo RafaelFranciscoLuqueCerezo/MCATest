@@ -14,8 +14,8 @@ import java.util.Collections;
 @Configuration
 public class SwaggerConfig {
     private ApiInfo apiInfo() {
-        return new ApiInfo("MyApp Rest APIs",
-                "APIs for MyApp.",
+        return new ApiInfo("SimilarProducts",
+                "APIs for SimilarProducts.",
                 "1.0",
                 "Terms of service",
                 new Contact("test", "www.org.com", "test@emaildomain.com"),
