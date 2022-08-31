@@ -17,7 +17,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 @RequiredArgsConstructor
 public class SecurityConfig {
-    private final SimilarProductsServerProperties serverProperties;
+    private final CorsOrigins corsOrigins;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
@@ -34,7 +34,7 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource(){
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(serverProperties.getCorsOrigins());
+        configuration.setAllowedOrigins(corsOrigins.getCorsOrigins());
         configuration.addAllowedMethod("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
