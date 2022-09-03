@@ -20,10 +20,11 @@ app:
   api:
     swagger:
       enable:true
+
   corsOrigins:
       - http://localhost:3001
-      - https://fiddle.jshell.net
-      - https://cdpn.io
-  mcaMicroservice: http://localhost:3001
+
+mcaMicroservice: http://localhost:3001
+restTemplateReadTimeout: 15
 
 

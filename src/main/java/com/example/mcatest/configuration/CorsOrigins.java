@@ -9,7 +9,6 @@ import java.util.List;
 @Data
 @Configuration
 @ConfigurationProperties(prefix = "app")
-public class SimilarProductsServerProperties {
-    private String mcaMicroservice;
+public class CorsOrigins {
     private List<String> corsOrigins;
 }

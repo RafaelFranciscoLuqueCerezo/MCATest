@@ -16,8 +16,8 @@ public class SimilarProductsAsyncConfig {
         //CPU logic min threads that are going to be used
         executor.setCorePoolSize(2);
         //Additional threads to create when al core threads are busy
-        executor.setMaxPoolSize(2147483647);
-        executor.setQueueCapacity(2147483647);
+        executor.setMaxPoolSize(100);
+        //Threads queue by default
         executor.setThreadNamePrefix("AsyncThreadSimilarProduct-");
         executor.initialize();
         return executor;
